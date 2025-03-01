@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { List } from "@phosphor-icons/react";
 
 const navigation = [
   { name: 'About', href: '#', current: true },
@@ -19,12 +20,14 @@ function Header() {
   };
 
   return (
-    <header className="w-full">
-      <div className="w-full py-12 px-20 flex flex-row justify-between">
+    <header className='w-full fixed'>
+      <div className='w-full py-4 md:py-12 px-8 md:px-20 flex flex-row justify-between'>
         <ul>
-          <li className="text-xl font-semibold text-gray-900">Mauricio Raupp</li>
+          <li className='text-xl font-semibold text-gray-900 cursor-pointer'>Mauricio Raupp</li>
         </ul>
-        <ul className="flex flex-row gap-8">
+        <List size={32} id='burguer' className='flex md:hidden cursor pointer'
+        /*onClick={() => }*/ />
+        <ul className='hidden md:flex flex-row gap-8'>
           {navItems.map((item) => (
             <li
               key={item.name}
