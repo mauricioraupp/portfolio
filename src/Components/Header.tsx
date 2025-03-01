@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { List } from "@phosphor-icons/react";
+import { motion } from "framer-motion";
+import MobileNav from './MobileNav';
 
 const navigation = [
   { name: 'About', href: '#', current: true },
@@ -8,8 +9,9 @@ const navigation = [
   { name: 'Contact', href: '#', current: false },
 ];
 
-function Header() {
+const Header: React.FC = () => {
   const [navItems, setNavItems] = useState(navigation);
+  const [isOpen, setIsOpen] = useState(false);
 
   const handleClick = (name: string) => {
     setNavItems((prevNavItems) =>
@@ -25,8 +27,28 @@ function Header() {
         <ul>
           <li className='text-xl font-semibold text-gray-900 cursor-pointer'>Mauricio Raupp</li>
         </ul>
-        <List size={32} id='burguer' className='flex md:hidden cursor pointer'
-        /*onClick={() => }*/ />
+        <div className="relative w-10 h-10 flex md:hidden items-center justify-center pb-2" onClick={() => setIsOpen(!isOpen)}>
+          <motion.div
+            className="w-8 h-6 flex flex-col justify-between cursor-pointer"
+            initial={false}>
+            <motion.div
+              className="w-8 h-0.75 bg-black rounded"
+              animate={isOpen ? { rotate: 45, y: 10.5 } : { rotate: 0, y: 0 }}
+              transition={{ duration: 0.2 }}
+            />
+            <motion.div
+              className="w-8 h-0.75 bg-black rounded"
+              animate={isOpen ? { opacity: 0 } : { opacity: 1 }}
+              transition={{ duration: 0.2 }}
+            />
+            <motion.div
+              className="w-8 h-0.75 bg-black rounded"
+              animate={isOpen ? { rotate: -45, y: -10.5 } : { rotate: 0, y: 0 }}
+              transition={{ duration: 0.2 }}
+            />
+          </motion.div>
+        </div>
+
         <ul className='hidden md:flex flex-row gap-8'>
           {navItems.map((item) => (
             <li
@@ -38,8 +60,10 @@ function Header() {
           ))}
         </ul>
       </div>
+
+      {isOpen && <MobileNav />}
     </header>
   );
-}
+};
 
 export default Header;
