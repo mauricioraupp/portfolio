@@ -1,5 +1,3 @@
-import React from 'react';
-
 function Article() {
   return(
     <main className='w-full h-screen flex justify-center items-center'>

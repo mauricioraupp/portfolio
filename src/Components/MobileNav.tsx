@@ -1,5 +1,3 @@
-import React, { useState } from 'react';
-
 function MobileNav() {
   return(
     <main className='fixed z-1 h-screen w-screen bg-stone-50 flex items-center justify-center'>
