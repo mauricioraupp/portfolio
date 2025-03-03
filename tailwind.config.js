@@ -10,7 +10,7 @@ module.exports = {
       }
     },
     fontFamily: {
-      'inter': ['Inter', 'sans']
+      'varela': ['Varela', 'sans']
     }
   },
   plugins: [],

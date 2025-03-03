@@ -1,8 +1,8 @@
-import Main from './Pages/Main';
+import WorkPage from './Pages/WorkPage';
 
 function App() {
   return (
-    <Main/>
+    <WorkPage/>
   );
 }
 
