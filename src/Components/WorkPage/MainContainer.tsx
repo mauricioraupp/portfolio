@@ -1,4 +1,4 @@
-import HeroSection from "./WorkPage/HeroSection";
+import HeroSection from "./HeroSection";
 
 function MainContainer() {
   return(

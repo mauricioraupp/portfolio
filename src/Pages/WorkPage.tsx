@@ -1,5 +1,5 @@
 import Header from '../Components/Header';
-import MainContainer from '../Components/MainContainer';
+import MainContainer from '../Components/WorkPage/MainContainer';
 
 const WorkPage = () => {
   return (
