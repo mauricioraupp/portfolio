@@ -1,9 +1,9 @@
 import * as THREE from 'three'
 
-import selfie from '@/assets/selfie.png'
-import selfieDepth from '@/assets/selfiedepth.png'
-import lego from '@/assets/lego.png'
-import legoDepth from '@/assets/legodepth.png'
+import selfie from '@/assets/images/selfie.jpg'
+import selfieDepth from '@/assets/images/selfiedepth.png'
+import lego from '@/assets/images/lego.png'
+import legoDepth from '@/assets/images/legodepth.png'
 
 type Which = 'selfie' | 'lego'
 

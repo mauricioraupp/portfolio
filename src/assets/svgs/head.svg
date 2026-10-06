@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<svg
+  width="800px"
+  height="800px"
+  viewBox="0 0 128 128"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
+
+  <circle
+    cx="64"
+    cy="49"
+    r="30"
+    stroke="oklch(26.8% 0.011 36.5)"
+    stroke-width="6"
+  />
+
+  <path
+    d="M21 116
+       C32.5 104
+       47.5 98
+       64 98
+       C80.5 98
+       95.5 104
+       107 116"
+    stroke="oklch(26.8% 0.011 36.5)"
+    stroke-width="6"
+    stroke-linecap="round"
+  />
+
+</svg>

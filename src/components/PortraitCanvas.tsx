@@ -59,7 +59,7 @@ function PortraitCanvas() {
       uAspectA: { value: 1 },
       uAspectB: { value: 1 },
       uContainerAspect: { value: 1 },
-      uZoom: { value: SHADER.zoom },
+      uZoom: { value: SHADER.zoom as Number },
       uMouse: { value: new THREE.Vector2(0, 0) },
       uDrift: { value: new THREE.Vector2(0, 0) },
       uStrength: { value: SHADER.strength },
@@ -83,6 +83,7 @@ function PortraitCanvas() {
       renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, PERF.maxPixelRatio))
       renderer.setSize(w, h, false)
       uniforms.uContainerAspect.value = w / h
+      uniforms.uZoom.value = w <= SHADER.mobileBreakpoint ? SHADER.zoomMobile : SHADER.zoom
 
       const mw = Math.max(2, Math.round(w * PERF.maskScale))
       const mh = Math.max(2, Math.round(h * PERF.maskScale))

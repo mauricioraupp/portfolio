@@ -4,18 +4,20 @@ export const SHADER = {
   depthBlur: 0.02,
   depthCap: 0.82,
   zoom: 1.1,
-  strength: 0.035,
-  bottomMargin: 0.03,
+  zoomMobile: 1.5,
+  mobileBreakpoint: 768,
+  strength: 0.03,
+  bottomMargin: 0.015,
 
   bgInner: '#ffffff',
-  bgOuter: '#e9e9e9',
-  bgStuds: 14,
+  bgOuter: '#f3f3f3',
+  bgStuds: 16,
   bgParallax: 0.35
 } as const
 
 export const PARALLAX = {
   driftX: 0.02,
-  driftY: 0.03,
+  driftY: 0.02,
   mouseEase: 0.09,
   driftEase: 0.035
 } as const

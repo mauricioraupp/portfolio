@@ -1,5 +1,27 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: "Cormorant";
+  src: url("./assets/fonts/CormorantGaramond-VariableFont_wght.ttf") format("truetype");
+  font-weight: 300 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "SansFlex";
+  src: url("./assets/fonts/GoogleSansFlex-VariableFont_GRAD\,ROND\,opsz\,slnt\,wdth\,wght.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "SpaceGrotesk";
+  src: url("./assets/fonts/SpaceGrotesk-VariableFont_wght.ttf") format("truetype");
+  font-weight: 300 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 html {
   scroll-padding-top: 20px;
 }
@@ -12,7 +34,6 @@ body {
   margin: 0;
   background: var(--color-ink);
   color: var(--color-paper);
-  font-family: var(--font-body);
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
 }
@@ -32,4 +53,14 @@ a {
 
 h1, h2, h3, p {
   margin: 0;
+}
+
+.cormorant {
+  font-family: "Cormorant", serif;
+}
+.sansflex {
+  font-family: "SansFlex", arial;
+}
+.spacegrotesk {
+  font-family: "SpaceGrotesk", arial;
 }
